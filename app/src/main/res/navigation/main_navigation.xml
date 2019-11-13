@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main_navigation"
+        app:startDestination="@id/shoeFragment">
+    <fragment
+            android:id="@+id/shoeFragment"
+            android:name="com.cwh.jetpacklearn.ui.fragment.main.ShoeFragment"
+            android:label="shoeFragment"
+            tools:layout="@layout/shoe_fragment">
+
+    </fragment>
+    <fragment
+            android:id="@+id/marketFragment"
+            android:name="com.cwh.jetpacklearn.ui.fragment.main.MarketFragment"
+            android:label="marketFragment"
+            tools:layout="@layout/market_fragment">
+
+    </fragment>
+
+
+    <fragment
+            android:id="@+id/meFragment"
+            android:name="com.cwh.jetpacklearn.ui.fragment.main.MeFragment"
+            android:label="meFragment"
+            tools:layout="@layout/me_fragment">
+
+    </fragment>
+</navigation>

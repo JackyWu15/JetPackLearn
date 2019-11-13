@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion rootProject.ext.androidCompileSdkVersion
+    buildToolsVersion rootProject.ext.androidBuildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.androidMinSdkVersion
+        targetSdkVersion rootProject.ext.androidTargetSdkVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api androidDependencies.appcompatx
+    api androidDependencies.constraintlayout
+    api androidDependencies.ktx
+    api androidDependencies.kotlin
+    api androidDependencies.fragmentx
+    api androidDependencies.material
+    api androidDependencies.legacy
+    api androidDependencies.nvga_fragment
+    api androidDependencies.nvga_ui
+    api androidDependencies.livedata
+    api androidDependencies.viewmodel
+    api androidDependencies.lifecycle
+    api androidDependencies.room_rt
+    api androidDependencies.room_ktx
+    api androidDependencies.paging
+    api androidDependencies.kotlin
+    api androidDependencies.sweetdialog
+    api androidDependencies.lottie
+    api androidDependencies.work
+    api androidDependencies.gson
+    api androidDependencies.glide
+    api androidDependencies.glide_tf
+
+
+}
